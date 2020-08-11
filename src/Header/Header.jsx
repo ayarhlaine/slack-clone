@@ -4,6 +4,9 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import SearchIcon from '@material-ui/icons/Search';
 import './Header.scss';
 function Header() {
+    const onInputChange = () => {
+
+    }
     return (
         <div className="Header">
             <div className="Header__Left">
@@ -11,7 +14,7 @@ function Header() {
             </div>
             <div className="Header__Search">
                 <SearchIcon />
-                <input type="text" value="Search Ayar Hlaine"/>
+                <input type="text" value="Search Ayar Hlaine" onChange={onInputChange}/>
             </div>
             <div className="Header__Right">
                 <HelpOutlineIcon />

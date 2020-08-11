@@ -1,6 +1,9 @@
 # slack-clone
 Slack Clone App ( React JS, Material UI )
 
+## Demo Link
+https://ayarhlaine.github.io/slack-clone/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
