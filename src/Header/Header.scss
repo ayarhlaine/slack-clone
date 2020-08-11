@@ -3,6 +3,7 @@
     background: $slack-background-color;
     display: flex;
     padding: 10px;
+    border-bottom: 1px $slack-border-color solid;
     .Header__Left{
         flex: 0.3;
         display: flex;

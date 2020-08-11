@@ -1,0 +1,45 @@
+@import 'styles/colors';
+.SideBar{
+    background: $slack-background-color;
+    max-width: 250px;
+    .SideBar__Header{
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px $slack-border-color solid;
+        .SideBar__Info{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            h2 {
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            h3{
+                display: flex;
+                align-items: center;
+                color: white;
+                font-size: 14px;
+                .MuiSvgIcon-root{
+                    color: green;
+                    font-size: 18px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .SideBar__Message{
+            display: flex;
+            align-items: center;
+            .MuiSvgIcon-root{
+                display: flex;
+                margin-left: auto;
+                background: white;
+                padding: 10px;
+                border-radius: 999px;
+            }
+        }
+    }
+}
