@@ -1,7 +1,9 @@
 @import 'styles/colors';
 .SideBar{
     background: $slack-background-color;
-    max-width: 250px;
+    padding: 0 10px;
+    color: white;
+    flex: 0.25;
     .SideBar__Header{
         display: flex;
         align-items: center;
@@ -13,7 +15,6 @@
             flex-direction: column;
             align-items: flex-start;
             h2 {
-                color: white;
                 font-size: 16px;
                 font-weight: bold;
                 margin-bottom: 10px;
@@ -21,7 +22,6 @@
             h3{
                 display: flex;
                 align-items: center;
-                color: white;
                 font-size: 14px;
                 .MuiSvgIcon-root{
                     color: green;
@@ -37,9 +37,15 @@
                 display: flex;
                 margin-left: auto;
                 background: white;
+                color: black;
                 padding: 10px;
+                font-size: 15px;
                 border-radius: 999px;
             }
         }
+    }
+    hr{
+        margin: 10px 0;
+        border: 1px $slack-border-color solid;
     }
 }
