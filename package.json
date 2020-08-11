@@ -2,7 +2,7 @@
   "name": "slack-clone",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ayarhlaine.github.io/hotel_template",
+  "homepage": "https://ayarhlaine.github.io/slack-clone",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
