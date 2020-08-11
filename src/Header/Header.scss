@@ -1,0 +1,39 @@
+@import 'styles/colors';
+.Header {
+    background: $slack-background-color;
+    display: flex;
+    padding: 10px;
+    .Header__Left{
+        flex: 0.3;
+        display: flex;
+        align-items: center;
+        .MuiSvgIcon-root{
+            color: white;
+            margin-right: 20px;
+            margin-left: auto;
+        }
+    }
+    .Header__Search{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0.4;
+        color: white;
+        border: solid 1px white;
+        border-radius: 18px;
+        input {
+            padding-left: 10px;
+            color: white;
+            background: transparent;
+            border: none;
+        }
+    }
+    .Header__Right{
+        flex: 0.3;
+        display: flex;
+        .MuiSvgIcon-root{
+            margin-left: auto;
+            color: white;
+        }
+    }
+}
