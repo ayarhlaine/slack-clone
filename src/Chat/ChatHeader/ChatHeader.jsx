@@ -2,12 +2,12 @@ import React from 'react'
 import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import './ChatHeader.scss';
-function ChatHeader() {
+const ChatHeader = ( { channelName }) => {
     return (
         <div className="ChatHeader">
             <div className="ChatHeader__Left">
                 <h4 className="ChatHeader__ChannelName">
-                    <strong> # general  </strong>
+                    <strong> # {channelName}  </strong>
                     <StarBorderOutlinedIcon />
                 </h4>
             </div>

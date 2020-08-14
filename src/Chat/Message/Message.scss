@@ -1,0 +1,18 @@
+.Message{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    .Message__UserImage{
+        height: 50px;
+        width: 50px;
+    }
+    .Message__Info{
+        padding-left: 10px;
+        .Message__Timestamp{
+            margin-left: 10px;
+            color: gray;
+            font-weight: 300;
+            font-size: 13px;
+        }
+    }
+}
