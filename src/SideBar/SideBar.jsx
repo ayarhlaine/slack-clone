@@ -14,7 +14,9 @@ import AddIcon from '@material-ui/icons/Add';
 import db from '../db';
 import './SideBar.scss';
 import SideBarOption from './SideBarOption/SideBarOption';
+import { useStateValue } from '../Provider';
 const SideBar = () => {
+    const [{user}] = useStateValue();
     const [channels, setChannels] = useState([]);
     useEffect(() => {
         db.collection('channels').onSnapshot(snapShot => {
@@ -28,7 +30,7 @@ const SideBar = () => {
                     <h2>Slack Clone</h2>
                     <h3>
                         <FiberManualRecordIcon />
-                        Ayar Hlaine
+                        {user?.displayName}
                     </h3>
                 </div>
                 <div className="SideBar__Message">

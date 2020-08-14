@@ -1,0 +1,24 @@
+.Login{
+    height: 100vh;
+    display: grid;
+    background-color: #f8f8f8;
+    place-items: center;
+    .Login__Container {
+        padding: 100px;
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 5px 10px #888888;
+        img{
+            object-fit: contain;
+            height: 100px;
+            margin-bottom: 40px;
+        }
+        button{
+            text-transform: inherit !important;
+            margin-top: 50px;
+            background-color: green;
+            color: white;
+        }
+    }
+}
