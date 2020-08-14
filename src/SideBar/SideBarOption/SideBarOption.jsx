@@ -1,8 +1,23 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import './SideBarOption.scss';
-const SideBarOption = ( { Icon, title } ) => {
+const SideBarOption = ( { Icon, id, title, addChannelOption } ) => {
+    const history = useHistory();
+    const selectChannel = () => {
+        if(id) {
+            history.push(`/channel/${id}`);
+        }
+        else {
+            history.push(`title`);
+        }
+    };
+    const addChannel = () => {
+
+    };
     return (
-        <div className="SideBarOption">
+        <div className="SideBarOption"
+        onClick={addChannelOption ? addChannel : selectChannel}
+        >
             { Icon &&  <Icon className="SideBarOption__Icon"/> }
             { Icon ? 
                 <h3>{title}</h3> :
