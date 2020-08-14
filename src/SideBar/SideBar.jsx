@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 import CreateIcon from '@material-ui/icons/Create';
 import MessageRoundedIcon from '@material-ui/icons/MessageRounded';
@@ -11,9 +11,16 @@ import FileCopyIcon from '@material-ui/icons/FileCopy';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import AddIcon from '@material-ui/icons/Add';
+import db from '../db';
 import './SideBar.scss';
 import SideBarOption from './SideBarOption/SideBarOption';
-function SideBar() {
+const SideBar = () => {
+    const [channels, setChannels] = useState([]);
+    useEffect(() => {
+        db.collection('channels').onSnapshot(snapShot => {
+            setChannels(snapShot.docs.map((doc) =>  ( { id: doc.id, name: doc.data().name})))
+        });
+    },[]);
     return (
         <div className="SideBar">
             <div className="SideBar__Header">
@@ -40,7 +47,9 @@ function SideBar() {
             <SideBarOption Icon={ArrowDropDownIcon} title={'Channels'}/>
             <hr/>
             <SideBarOption Icon={AddIcon} title={'Add Channel'}/>
-            <SideBarOption title={'Youtube'}/>
+            {channels.map((channel) => (
+                <SideBarOption key={channel.id} title={channel.name}/>
+            ))}
         </div>
     )
 }
