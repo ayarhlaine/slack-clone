@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import db from '../../db';
 import './SideBarOption.scss';
 const SideBarOption = ( { Icon, id, title, addChannelOption } ) => {
     const history = useHistory();
@@ -12,7 +13,12 @@ const SideBarOption = ( { Icon, id, title, addChannelOption } ) => {
         }
     };
     const addChannel = () => {
-
+        const channelName = prompt('Fill Channel Name');
+        if(channelName) {
+            db.collection('channels').add({
+                name: channelName,
+            });
+        }
     };
     return (
         <div className="SideBarOption"
