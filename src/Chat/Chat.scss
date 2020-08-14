@@ -1,4 +1,6 @@
 .Chat{
     flex: 0.75;
-    padding: 10px;
+    flex-grow: 1;
+    overflow-y: scroll;
+    // padding-bottom: 130px;
 }
