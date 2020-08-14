@@ -4,9 +4,10 @@ import ChatHeader from './ChatHeader/ChatHeader';
 import { useParams } from 'react-router-dom';
 import Message from './Message/Message';
 import db from '../db';
+import ChatInput from './ChatInput/ChatInput';
 function Chat() {
-    const {channelId} = useParams();
-    const [channelDetail, setChannelDetail] = useState({ name: ''});
+    const { channelId } = useParams();
+    const [channelDetail, setChannelDetail] = useState({});
     const [channelMessages, setChannelMessages] = useState([]);
     useEffect(() => {
         db.collection('channels').doc(channelId)
@@ -20,14 +21,13 @@ function Chat() {
             setChannelMessages(snapShot.docs.map(doc => doc.data()));
         });
     },[channelId]);
-    const { name } = channelDetail;
     return (
         <div className="Chat">
-            <ChatHeader channelName={name}/>
-            {/* <p>{JSON.stringify(channelMessages)}</p> */}
+            <ChatHeader channelName={channelDetail?.name}/>
             <div className="MessageList">
-                { channelMessages.map(({ message, user, timestamp, userImage}) => (
+                { channelMessages.map(({ message, user, timestamp, userImage}, index) => (
                     <Message 
+                    key={index}
                     message={message}
                     user={user}
                     timestamp={timestamp}
@@ -35,8 +35,7 @@ function Chat() {
                     />
                 ))}
             </div>
-            {/* Message List */}
-            {/* Message Input */}
+            <ChatInput channelName={channelDetail?.name} channelId={channelId}/>
         </div>
     )
 }

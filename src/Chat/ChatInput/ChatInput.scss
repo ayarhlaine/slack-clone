@@ -1,0 +1,20 @@
+.ChatInput {
+    border-radius: 20px;
+    background-color: red;
+    form {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        input{
+            position: fixed;
+            bottom: 10px;
+            width: 70%;
+            border-radius: 3px;
+            border: 1px solid gray;
+            padding: 20px;
+        }
+        button {
+            display: none;
+        }
+    }
+}
