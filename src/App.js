@@ -15,7 +15,7 @@ function App() {
         :
         <>
         <Header />
-        <Router >
+        <Router basename={'/slack-clone'}>
         <Switch>
             <AppBody />
           </Switch>
