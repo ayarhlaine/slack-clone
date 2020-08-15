@@ -7,7 +7,7 @@ function AppBody() {
     return (
         <div className="AppBody">
             <SideBar />
-            <Route path={`${process.env.PUBLIC_URL}/channel/:channelId`}>
+            <Route path={`/channel/:channelId`}>
                 <Chat />
             </Route>
         </div>
