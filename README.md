@@ -1,5 +1,5 @@
 # slack-clone
-Slack Clone App ( React JS, Material UI )
+Slack Clone App ( React JS, Material UI , Context API, Firebase, Firebase Authentication)
 
 ## Demo Link
 https://ayarhlaine.github.io/slack-clone/
