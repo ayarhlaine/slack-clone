@@ -15,7 +15,7 @@ function App() {
         :
         <>
         <Header />
-        <Router basename={'/slack-clone'}>
+        <Router basename={process.env.PUBLIC_URL}>
         <Switch>
             <AppBody />
           </Switch>
