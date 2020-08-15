@@ -21,9 +21,9 @@ function Login() {
         <div className="Login">
             <div className="Login__Container">
                 <img src="https://d34u8crftukxnk.cloudfront.net/slackpress/prod/sites/6/2019-01_BrandRefresh_Old-to-New-Final.gif" alt=""/>
-                <h1>Sigin to Ayar Hlaine WorkSpace</h1>
+                <h1>Sigin to Ayar Hlaine Workspace</h1>
                 <p>ayarhlaine.slack.com</p>
-                <Button onClick={onLogin}>Sigin with Google</Button>
+                <Button onClick={onLogin}>SIGIN IN WITH GOOGLE</Button>
             </div>
         </div>
     )

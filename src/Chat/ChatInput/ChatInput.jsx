@@ -21,12 +21,14 @@ const ChatInput = ( { channelName, channelId }) =>{
     };
     return (
         <div className="ChatInput">
-            <form>
-                <input 
-                placeholder={`Message #${channelName?.toLowerCase()}`} 
-                value={input} onChange={(e) => setInput(e.target.value)}/>
-                <button onClick={sendMessage}>Send</button>
-            </form>
+            <div className="ChatInput__Container">
+                <form>
+                    <input 
+                    placeholder={`Message #${channelName?.toLowerCase()}`} 
+                    value={input} onChange={(e) => setInput(e.target.value)}/>
+                    <button onClick={sendMessage}>Send</button>
+                </form>
+            </div>
         </div>
     )
 }

@@ -1,14 +1,21 @@
 .ChatInput {
-    border-radius: 20px;
-    background-color: red;
-    form {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    .ChatInput__Container {
         position: relative;
+        width: 100%;
+        flex: 1 1 auto;
         display: flex;
         justify-content: center;
-        input{
+        form {
+            background-color: green;
+            width: 100%;
+        }
+        form > input{
             position: fixed;
             bottom: 10px;
-            width: 70%;
+            width: 100%;
             border-radius: 3px;
             border: 1px solid gray;
             padding: 20px;

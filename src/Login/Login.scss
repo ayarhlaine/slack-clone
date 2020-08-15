@@ -1,10 +1,11 @@
+@import 'styles/colors';
 .Login{
     height: 100vh;
     display: grid;
     background-color: #f8f8f8;
     place-items: center;
     .Login__Container {
-        padding: 100px;
+        padding: 100px 10px;
         text-align: center;
         background-color: white;
         border-radius: 10px;
